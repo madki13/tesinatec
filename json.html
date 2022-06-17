@@ -1,0 +1,46 @@
+<script type="text/javascript" src="js/jquery-latest.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#load").click(function () {
+
+            $.ajax({
+
+                method: "POST",
+
+                url: "data.json",
+
+            }).done(function (response) {
+
+                for (index in response) {
+
+                    var model = response[index];
+
+                    $("table").append("<tr><td>" + model.nama + "</td><td>" + model.kelas + "</td></tr>");
+
+                }
+
+            });
+
+        });
+
+    });
+
+</script>
+
+
+<button id="load">Ambil data</button>
+
+<table width="300" border="1">
+
+    <tr>
+
+        <th>Nama</th>
+
+        <th>Kelas</th>
+
+    </tr>
+
+</table>

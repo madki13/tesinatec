@@ -1,0 +1,18 @@
+<script type="text/javascript" src="js/jquery-latest.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#tombol").click(function(){
+            $("#artikel").toggle();
+        });
+        $("#judul").keyup(function(){
+            $("#hasil").html($(this).val());
+        });
+    });
+</script>
+
+<button id="tombol">tekan aku!</button>
+<div id="artikel">
+    <input type="text" id="judul" />
+    <p id="hasil"></p>
+    <img src="img/menggokil.jpg" width="100%" />
+</div>
